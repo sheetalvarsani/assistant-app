@@ -11,7 +11,7 @@ export interface WeatherData {
   }
   
   const getWeatherData = async (latitude: number, longitude: number): Promise<WeatherData | null> => {
-    const apiKey = import.meta.env.WEATHER_API_KEY;
+    const apiKey = import.meta.env.VITE_WEATHER_API_KEY;
     const url = `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${latitude},${longitude}`;
   
     try {
